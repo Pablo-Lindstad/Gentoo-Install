@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+## Kill if already running
+killall -9 xfsettingsd picom polybar mpd dunst ksuperkey xfce4-power-manager
+
+#Set keyboard layout
+setxkbmap no
+
+## Restore Wallpaper
+nitrogen --restore
+
+## Launch Polybar
+bash ~/.config/polybar/launch.sh
+
+## Notification Daemon
+exec dunst &
+
+## Launch tint2
+exec tint2 &
+
+## Thunar Daemon
+exec thunar --daemon &
