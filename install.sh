@@ -3,9 +3,11 @@ doas mv Zafiro Qogirr /usr/share/icons/
 doas mv make.conf /etc/portage/
 doas mv Arc-Dark /usr/share/themes/
 doas chmod +x lockscreen.sh betterlockscreen reboot.sh shutdown.sh
-doas mv lockscreen.sh betterlockscreen reboot.sh shutdown.sh
+doas mv lockscreen.sh betterlockscreen reboot.sh shutdown.sh /usr/bin
 doas mv nerd-fonts icon-fonts bitmap-fonts normal-fonts /usr/share/fonts
+doas mdkir ~/.config
 doas mv -v config/* ~/.config/
+doas rmdir config
 doas env-update
 doas etc-update
 doas source /etc/profile
