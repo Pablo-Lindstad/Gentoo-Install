@@ -51,7 +51,7 @@
 				</item>
 				<item label="Shutdown">
 					<action name="Execute">
-						<command>/usr/bin/reboot.sh</command>
+						<command>/usr/bin/shutdown.sh</command>
 					</action>
 				</item>
 		</menu>
